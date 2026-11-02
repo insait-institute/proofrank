@@ -124,3 +124,17 @@ For this, after preparing the diversity project, use the `summary_diversity_clus
 
 Inside the `notebooks/` folder, you can use the `plots.ipynb` notebook to re-generate the figures from our paper.
 
+# Citation
+
+If you use find the code or dataset useful, please cite us accordingly:
+
+```
+@inproceedings{petrov2026proofrank,
+  title={Not All Proofs Are Equal: Evaluating {LLM} Proof Quality Beyond Correctness},
+  author={Petrov, Ivo and Dekoninck, Jasper and Dimitrov, Dimitar I. and Vechev, Martin},
+  booktitle={The Fortieth Annual Conference on Neural Information Processing Systems Evaluations and Datasets Track},
+  year={2026},
+  url={https://openreview.net/forum?id=Zf9xKiTAom}
+}
+```
+
