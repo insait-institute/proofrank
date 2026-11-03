@@ -3,13 +3,13 @@ from typing import Optional
 from loguru import logger
 import re
 from fractions import Fraction
-from llmteach.utils import latex2sympy_fixed
+from proofrank.utils import latex2sympy_fixed
 from sympy import N, Integer
 import sympy
 from typing import Any
 from enum import Enum
 from functools import total_ordering
-from llmteach.parse_manual import manual_mapper, complete_mapper
+from proofrank.parse_manual import manual_mapper, complete_mapper
 import numpy as np
 
 

@@ -103,6 +103,13 @@ You can see the available results by running the following script:
 python ./scripts/results/eval_package.py
 ```
 
+To reproduce the results from the paper without querying any model, first restore our judge outputs from [ProofRank-outputs](https://huggingface.co/datasets/INSAIT-Institute/ProofRank-outputs):
+
+```
+python ./scripts/data/restore_released_data.py
+python ./scripts/results/eval_package.py
+```
+
 # Ablation Studies and Additional Experiments
 
 ### Conciseness Calibration (Sec. 4.2)

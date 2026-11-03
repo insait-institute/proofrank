@@ -192,7 +192,7 @@ def report_rankings(raw_scores, pairwise_data=None, target_models=None):
     ]
 
     for setting in settings:
-        do_bootstrap = False# setting in ["correct", "all"]
+        do_bootstrap = setting in ["correct", "all"]
         print(f"\n{'='*20} Setting: {setting} {'='*20}\n")
 
         metrics_scalar = list(raw_scores.get(setting, {}).keys())

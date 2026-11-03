@@ -15,6 +15,24 @@ NEGATIVE_METRICS = {
 TIE_METRICS = {"spacy_word_count_ratio"}
 TIE_THRESHOLD = 0.1
 
+def _model_accuracy_from_correctness_map(correctness_dict: dict, target_models=None) -> pd.DataFrame:
+    counts = defaultdict(int)
+    correct = defaultdict(int)
+
+    for (solver, _pid), is_ok in correctness_dict.items():
+        if target_models and solver not in target_models:
+            continue
+        counts[solver] += 1
+        correct[solver] += int(bool(is_ok))
+
+    rows = []
+    for m in sorted(counts.keys()):
+        n = counts[m]
+        acc = (100.0 * correct[m] / n) if n > 0 else np.nan
+        rows.append({"model": m, "accuracy_pct": acc, "n_items": n})
+
+    return pd.DataFrame(rows)
+
 
 def _prepare_pairwise_from_scalar_scores(solver_data, target_models=None, tie_threshold=None):
     records = []

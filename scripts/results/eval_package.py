@@ -30,9 +30,12 @@ parser.add_argument(
 
 TARGET_MODELS = {
     'deepseek/deepseek_v32_think',
+    'deepseek/deepseek_v4_pro',
     'gemini/gemini-3-flash',
     'gemini/gemini-31-pro',
+    'gemini/gemini-37-flash',
     'openai/gpt-54',
+    'openai/gpt-56-sol',
     'stepfun/3.5-flash',
     'glm/glm-5',
     'xai/grok-41-fast-reasoning',
@@ -242,7 +245,6 @@ if __name__ == "__main__":
                     tags = sorted(tag_counts.keys(), key=lambda x: tag_counts[x], reverse=True)
                     topic_map[row["problem_id"]] = tags[0]
             except Exception as e:
-                breakpoint()
                 topic_map[row["problem_id"]] = "Unknown"
     unique_topics = set(topic_map.values()) - {None, "Unknown"}
 
@@ -464,6 +466,17 @@ if __name__ == "__main__":
 
             correct_global_nonhuman_counts = cluster_counts_for_indices(clusters, correct_nonhuman_indices)
             entries_by_model = group_entries_by_model(nonhuman_entries, exclude_human=True)
+
+            add_diversity_metric(
+                raw_scores=raw_scores,
+                metric_name="diversity_novelty",
+                model_id="human/human",
+                problem_id=base_pid,
+                value=(len(human_cluster_names.intersection(global_nonhuman_counts.keys()))/ len(human_cluster_names)) if human_cluster_names else 0.0,
+                topic_map=topic_map,
+                unique_topics=unique_topics,
+                correctness_bucket=False,
+            )
 
             for model_id, model_entries in entries_by_model.items():
                 if not model_entries:
