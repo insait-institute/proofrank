@@ -4,13 +4,16 @@ admins:
   - "sycophancy-1"
 
 model_configs:
-  # - 'deepseek/deepseek_v32_think'
-  # - 'gemini/gemini-3-flash'
-  # - 'gemini/gemini-31-pro'
-  # - 'openai/gpt-54'
-  # - 'stepfun/3.5-flash'
+  - 'deepseek/deepseek_v32_think'
+  - 'gemini/gemini-3-flash'
+  - 'gemini/gemini-31-pro'
+  - 'openai/gpt-54'
+  - 'stepfun/3.5-flash'
   - 'glm/glm-5'
-  # - 'xai/grok-41-fast-reasoning'
-  # - 'moonshot/k25'
-  # - 'qwen/qwen35_397b_a17b_high'
-  # - "openai/oss-120b"
+  - 'xai/grok-41-fast-reasoning'
+  - 'moonshot/k25'
+  - 'qwen/qwen35_397b_a17b_high'
+  - 'openai/oss-120b'
+  - 'deepseek/deepseek_v4_pro'
+  - 'gemini/gemini-37-flash'
+  - 'openai/gpt-56-sol'

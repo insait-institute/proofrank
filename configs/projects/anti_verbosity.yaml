@@ -8,3 +8,10 @@ model_configs:
   - 'gemini/gemini-3-flash'
   - 'moonshot/k25'
   - "openai/oss-120b"
+  - 'deepseek/deepseek_v4_pro'
+  - 'gemini/gemini-31-pro'
+  - 'gemini/gemini-37-flash'
+  - 'glm/glm-5'
+  - 'openai/gpt-54'
+  - 'openai/gpt-56-sol'
+  - 'qwen/qwen35_397b_a17b_high'

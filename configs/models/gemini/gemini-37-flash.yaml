@@ -1,0 +1,11 @@
+model: gemini-3.7-flash
+api: google
+temperature: null
+top_p: null
+concurrent_requests: 32
+max_tokens: 65536
+read_cost: 0.75
+write_cost: 3.75
+reasoning_effort: high
+human_readable_id: Gemini 3.7 Flash
+date: "2026-08-13"

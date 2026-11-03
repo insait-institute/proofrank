@@ -1,0 +1,15 @@
+model: openai/gpt-5.6-sol
+api: openrouter
+provider:
+  only:
+    - openai/flex
+  allow_fallbacks: false
+max_tokens: 200000
+read_cost: 1.0
+write_cost: 5.0
+concurrent_requests: 32
+temperature: null
+top_p: null
+reasoning_effort: max
+human_readable_id: GPT-5.6 Sol (max, flex)
+date: "2026-07-09"

@@ -1,0 +1,11 @@
+model: deepseek/deepseek-v4-pro-0813
+api: openrouter
+concurrent_requests: 72
+max_tokens: 128000
+temperature: 1.0
+top_p: 0.95
+read_cost: 1.32
+write_cost: 3.96
+reasoning_effort: max
+human_readable_id: DeepSeek V4 Pro (0813, max)
+date: "2026-08-13"

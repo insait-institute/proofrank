@@ -190,5 +190,8 @@ solver_models:
   - 'moonshot/k25'
   - 'qwen/qwen35_397b_a17b_high'
   - "openai/oss-120b"
+  - 'deepseek/deepseek_v4_pro'
+  - 'gemini/gemini-37-flash'
+  - 'openai/gpt-56-sol'
 data_path: "data/postprocess/matharena_proofs/diversity_samples.json"
 n_solutions: -1
